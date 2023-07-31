@@ -14,7 +14,6 @@ class Model(torch.nn.Module):
 
 class Predictor(BasePredictor):
     def setup(self):
-        pass
         self.model = Model()
         self.model.load_state_dict(torch.load("model.pth"))
         self.model.eval()
